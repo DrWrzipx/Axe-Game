@@ -1,10 +1,21 @@
 #include "raylib.h"
-#include <string>
+#define MY_COLOR        CLITERAL(Color){ 157, 214, 36, 0 }
 int main() {
 
-    int initWidth = 350;
-    int initHeight = 200;
-    const char* initTitleText = "Simple Windows";
+    const int init_width = 800;
+    const int init_height = 450;
+    const char* init_title_text = "Simple Windows";
 
-    InitWindow(initWidth, initHeight, initTitleText);
-}
+    Color color;
+
+    InitWindow(init_width, init_height, init_title_text);
+
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
+            ClearBackground(MY_COLOR);
+        EndDrawing();
+    }
+
+    CloseWindow();
+ }

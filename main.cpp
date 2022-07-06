@@ -1,6 +1,10 @@
-#include <iostream>
-
+#include "raylib.h"
+#include <string>
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+    int initWidth = 350;
+    int initHeight = 200;
+    const char* initTitleText = "Simple Windows";
+
+    InitWindow(initWidth, initHeight, initTitleText);
 }
